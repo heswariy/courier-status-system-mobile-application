@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScannerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/scanner_view"
+            app:autoFocusButtonColor="@android:color/white"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonColor="@android:color/white"
+            app:flashButtonVisible="true"
+            app:maskColor="#6C000000" />
+
+
+        <TextView
+            android:id="@+id/tv_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scanner_view"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Scan something..."
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scanner_view"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/tv_textView"
+            android:text="Done Scanning"
+            android:textAllCaps="false" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_textView" />
+
+    </RelativeLayout>
+
+</ScrollView>

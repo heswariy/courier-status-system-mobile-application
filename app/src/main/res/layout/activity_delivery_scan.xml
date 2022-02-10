@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeliveryScanActivity">
+
+    <EditText
+        android:id="@+id/et_dataInput"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tracking Number"
+        android:inputType="textPersonName"
+        android:paddingTop="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnQrScanner"
+        app:layout_constraintEnd_toStartOf="@+id/btnQrScanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnQrScanner" />
+
+    <ImageButton
+        android:id="@+id/btnQrScanner"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_qr_scanner"
+        app:layout_constraintStart_toEndOf="@+id/et_dataInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_ScannedList"
+        android:layout_width="409dp"
+        android:layout_height="526dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_dataInput" />
+
+    <Button
+        android:id="@+id/btn_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_ScannedList" />
+
+    <Button
+        android:id="@+id/btn_Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_Upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/btn_Upload"
+        app:layout_constraintTop_toTopOf="@+id/btn_Upload" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
